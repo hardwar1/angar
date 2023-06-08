@@ -1,0 +1,47 @@
+.main-content {
+  & > *:last-child {
+    padding-bottom: 70px;
+
+    @include max-w($tablets) {
+      padding-bottom: 35px;
+    }
+  }
+
+  &__block {
+    padding-top: 190px;
+
+    @include max-w($desktops-xl) {
+      padding-top: 90px;
+    }
+
+    @include max-w($tablets) {
+      padding-top: 70px;
+    }
+
+    &--67 {
+      padding-top: 67px;
+    }
+  }
+
+  &__block--clear {
+    padding: 0;
+  }
+
+  &__first-block {
+    padding-top: 105px;
+
+    @include max-w($tablets) {
+      padding-top: 60px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 55px;
+  }
+
+  &__container {
+    @include max-w($tablets) {
+      padding: 0;
+    }
+  }
+}

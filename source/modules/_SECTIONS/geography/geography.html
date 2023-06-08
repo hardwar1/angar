@@ -1,0 +1,63 @@
+<div class="geography">
+  {{> triangle triangle-parent-mod="geography__triangle" color="#797548" triangle-mod="triangle--right" }}
+
+  <div class="container">
+    <div class="geography__h2 line">
+      <h2>
+        Наша география
+      </h2>
+    </div>
+  </div>
+
+    <div class="geography__body">
+      <div class="geography__map">
+        <span class="geography__marker" style="background-image: url(img/marker.svg)"></span>
+        <span class="geography__marker geography__marker--orange"
+          style="background-image: url(img/marker-orange.svg)"></span>
+        <svg width="51" height="64" viewBox="0 0 51 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M51 24.728C51 11.031 39.625 0.000732422 25.5 0.000732422C11.375 0.000732422 0 11.031 0 24.728C0 38.425 25.5 64.0007 25.5 64.0007C25.5 64.0007 51 38.425 51 24.728ZM13.625 24.2432C13.625 17.9401 19 12.728 25.5 12.728C32 12.728 37.375 17.8189 37.375 24.2432C37.375 30.5462 32.125 35.7583 25.5 35.7583C19 35.7583 13.625 30.5462 13.625 24.2432Z"
+            fill="white" />
+        </svg>
+        <svg width="77" height="97" viewBox="0 0 77 97" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M77 37.4783C77 16.7188 59.826 0.000976562 38.5 0.000976562C17.174 0.000976562 0 16.7188 0 37.4783C0 58.2377 38.5 97.001 38.5 97.001C38.5 97.001 77 58.2377 77 37.4783ZM20.5711 36.7434C20.5711 27.1904 28.6863 19.2908 38.5 19.2908C48.3137 19.2908 56.4289 27.0067 56.4289 36.7434C56.4289 46.2964 48.5024 54.1961 38.5 54.1961C28.6863 54.1961 20.5711 46.2964 20.5711 36.7434Z"
+            fill="#F29D39" />
+        </svg>
+        <img class="geography__img" src="img/map.jpg" alt="">
+      </div>
+
+      <div class="geography__baloon baloon">
+        <a class="baloon__inner" href="">
+          <img class="baloon__img" src="img/baloon.jpg" width="398" alt="КАРКАСНО-ТЕНТОВЫЙ СКЛАД">
+
+          <div class="baloon__info">
+            <div class="baloon__title h3">
+              КАРКАСНО-ТЕНТОВЫЙ СКЛАД
+            </div>
+            <span class="baloon__place">
+              Подольск
+            </span>
+
+            <div class="baloon__row">
+              <span class="baloon__property baloon__property--date">
+                Дата постройки
+                <span class="baloon__num">29.03.2023</span>
+              </span>
+            </div>
+            <div class="baloon__row">
+              <span class="baloon__property baloon__property--width">
+                Ширина
+                <span class="baloon__num">12 м</span>
+              </span>
+              <span class="baloon__property baloon__property--height">
+                Длина
+                <span class="baloon__num">30 м</span>
+              </span>
+            </div>
+          </div>
+          <span class="baloon__hover">Подробнее</span>
+        </a>
+      </div>
+    </div>
+</div>

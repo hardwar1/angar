@@ -1,0 +1,64 @@
+.slider {
+  width: 100%;
+  position: relative;
+
+  &__swiper {
+    margin-bottom: 33px;
+    display: flex;
+    width: 100%;
+
+    @include max-w($desktops-md) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__list {
+  }
+
+  &__slider-item {
+    display: flex;
+  }
+
+  &__img-wrap {
+    width: 100%;
+  }
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+
+    @include max-w($desktops-md) {
+      height: 550px !important;
+    }
+
+    @include max-w($tablets) {
+      height: 400px !important;
+    }
+  }
+
+  &__thumb-slider {
+    width: 100%;
+  }
+
+  &__thumb-list {
+  }
+
+  &__thumb-item {
+  }
+
+  &__thumb-wrap {
+  }
+
+  &__thumb-img {
+    // height: 239px;
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+
+    @include max-w($desktops-md) {
+      height: 100px;
+    }
+  }
+}

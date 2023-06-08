@@ -1,0 +1,62 @@
+.geography {
+  position: relative;
+
+  &__triangle {
+    top: unset;
+    width: 39%;
+    bottom: -1000px;
+  }
+
+  &__h2 {
+  }
+
+  &__body {
+    position: relative;
+  }
+
+  &__map {
+    height: 870px;
+    z-index: 0;
+    @include max-w($desktops-sm) {
+      height: 414px;
+    }
+  }
+
+  &__marker {
+    display: inline-block;
+    width: 51px;
+    height: 64px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    &--orange {
+      width: 77px;
+      height: 97px;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 0.81;
+    z-index: -2;
+  }
+
+  &__baloon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(180px);
+
+    @include max-w($desktops-lg) {
+      left: unset;
+      transform: translateY(-50%);
+      right: 20px;
+    }
+  }
+}

@@ -1,0 +1,85 @@
+.footer {
+  background-color: #393939;
+
+  &__container {
+    @include max-w($desktops-lg) {
+      // max-width: 700px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 59px 0 33px;
+
+    @include max-w($desktops-lg) {
+      flex-wrap: wrap;
+      gap: 40px 60px;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+  }
+
+  &__logo-wrap {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    @include max-w($desktops-lg) {
+      width: 100%;
+    }
+  }
+
+  &__logo img {
+    width: 172px;
+    height: unset;
+
+    @include max-w($desktops-sm) {
+      width: unset;
+      height: 120px;
+    }
+  }
+
+  &__logo-text {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 24px;
+    width: 160px;
+  }
+
+  &__menu {
+  }
+
+  &__item:not(:last-child) {
+  }
+
+  &__link {
+    display: inline-block;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+  }
+
+  &__links {
+  }
+
+  &__btn {
+    margin-bottom: 55px;
+  }
+
+  &__by {
+    display: flex;
+    gap: 21px;
+  }
+
+  &__by-text {
+    padding-top: 5px;
+    font-family: $ff-lato;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 16px;
+    width: 210px;
+  }
+}

@@ -1,0 +1,93 @@
+.type-metal {
+  position: relative;
+
+  &__triangle {
+    top: -430px;
+  }
+  &__h2 {
+    margin-bottom: 106px;
+    @include max-w($desktops-sm) {
+      margin-bottom: 65px;
+    }
+  }
+
+  &__table-wrap {
+    @include max-w($desktops-md) {
+      padding-left: 25px;
+      padding-right: 25px;
+      &::after,
+      &::before {
+        display: block;
+      }
+    }
+  }
+
+  &__table {
+    display: block;
+    border-spacing: 0;
+    border-collapse: collapse;
+    overflow: auto;
+    margin-bottom: 80px;
+
+    @include max-w($tablets) {
+      margin-bottom: 40px;
+    }
+
+    tbody {
+      display: table;
+      width: 100%;
+      min-width: 1050px;
+    }
+
+    tr {
+      & > * {
+        padding: 31px 10px;
+        border-bottom: 1px solid #7d7d7d;
+        border-right: 1px solid #7d7d7d;
+        &:first-child {
+          border-left: 1px solid #7d7d7d;
+          max-width: 262px;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
+
+      &:first-child > * {
+        border-top: 1px solid #7d7d7d;
+      }
+    }
+
+    th {
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    td {
+      text-align: center;
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 18px;
+    }
+
+    img {
+      display: block;
+      object-position: center;
+      margin: 0 auto 15px;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px 70px;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 434px;
+    width: 100%;
+  }
+}

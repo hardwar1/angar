@@ -1,0 +1,90 @@
+.do {
+  border-top: 1px solid #7d7d7d;
+  border-bottom: 1px solid #7d7d7d;
+
+  &__inner {
+    @include max-w($desktops-md) {
+      padding-left: 25px;
+      padding-right: 25px;
+      &::after,
+      &::before {
+        display: block;
+      }
+    }
+  }
+
+  &__list-wrap {
+    overflow: auto;
+    // overflow: -moz-scrollbars-vertical;
+  }
+
+  &__list {
+    display: flex;
+    min-width: 1020px;
+  }
+
+  &__item {
+    border-left: 1px solid #7d7d7d;
+    border-right: 1px solid #7d7d7d;
+    padding: 135px 26px 44px;
+    max-width: calc(100% / 5);
+    transition: background-color 0.3s;
+    position: relative;
+
+    @include max-w($desktops-xl) {
+      padding-top: 85px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 45px;
+      left: 30px;
+      width: 66px;
+      height: 66px;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      @include max-w($desktops-xl) {
+        top: 28px;
+        width: 46px;
+        height: 45px;
+      }
+    }
+
+    &:hover {
+      background-color: #333333;
+    }
+
+    &--icon1::after {
+      background-image: url(../img/do/1.png);
+    }
+    &--icon2::after {
+      background-image: url(../img/do/2.png);
+    }
+    &--icon3::after {
+      background-image: url(../img/do/3.png);
+    }
+    &--icon4::after {
+      background-image: url(../img/do/4.png);
+    }
+    &--icon5::after {
+      background-image: url(../img/do/5.png);
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+
+    * {
+      @include max-w($desktops-xl) {
+        font-size: 15px;
+        line-height: 18px;
+      }
+    }
+  }
+
+  &__text {
+    font-weight: 300;
+  }
+}

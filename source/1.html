@@ -1,0 +1,18 @@
+---
+layout: 1
+title: Список страниц
+list-1:
+    -   href: index
+        text: Главная
+    -   href: type-angar
+        text: Тип ангара
+    -   href: object
+        text: КАРКАСНО-ТЕНТОВЫЙ СКЛАД
+---
+<ol>
+    {{#each list-1}}
+    <li>
+        <a href="{{href}}.html">{{text}}</a>
+    </li>
+    {{/each}}
+</ol>

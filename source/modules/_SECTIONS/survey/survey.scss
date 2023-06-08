@@ -1,0 +1,104 @@
+.survey {
+  padding-top: 70px;
+
+  &__inner {
+    padding-top: 365px;
+    padding-bottom: 125px;
+    background-image: url(../img/survey-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    @include max-w($desktops-lg) {
+      padding-top: 300px;
+      padding-bottom: 56px;
+    }
+
+    @include max-w($desktops-sm) {
+      padding-top: 155px;
+    }
+
+    @include max-w($tablets) {
+      padding-top: 30px;
+      padding-bottom: 300px;
+    }
+  }
+
+  &__info {
+    max-width: 700px;
+    padding-left: 100px;
+
+    @include max-w($desktops-xl) {
+      max-width: 387px;
+      padding-left: 58px;
+    }
+
+    @include max-w($tablets) {
+      max-width: 460px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+  &__h2 > * {
+    text-align: left;
+    margin-bottom: 57px;
+
+    @include max-w($desktops-xl) {
+      font-size: 30px;
+      line-height: 37px;
+      margin-bottom: 44px;
+    }
+
+    @include max-w($desktops-sm) {
+      font-size: 24px;
+      line-height: 29px;
+    }
+
+    @include max-w($tablets) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  &__btn {
+    padding: 30px 25px;
+    font-size: 18px;
+    line-height: 22px;
+    width: 292px;
+    @include max-w($desktops-sm) {
+      padding: 17px 25px;
+      width: 201px;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: calc(100% + 198px);
+    width: 1000px;
+    background-size: contain;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+
+    @include max-w($desktops-lg) {
+      width: 800px;
+    }
+
+    @include max-w($desktops-md) {
+      width: 580px;
+    }
+
+    @include max-w($desktops-sm) {
+      width: 480px;
+    }
+    @include max-w($tablets) {
+      width: 60%;
+      min-width: 255px;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+@import "_service/variables";
+@import "_service/mixins";
+@import "_service/fonts";
+@import "_service/reset";
+
+/* plugins */
+
+@import "_GLOBAL/page";
+@import "_service/basic";
+@import "_GLOBAL/content";
+
+
+/* modules */
+@import "../modules/_ELEMENTS/pagination/pagination";
+@import "../modules/_ELEMENTS/triangle/triangle";
+@import "../modules/_ELEMENTS/slider/slider";
+
+
+@import "../modules/_GLOBAL/header/header";
+@import "../modules/_GLOBAL/footer/footer";
+
+
+@import "../modules/_SECTIONS/hero/hero";
+@import "../modules/_SECTIONS/do/do";
+@import "../modules/_SECTIONS/type/type";
+@import "../modules/_SECTIONS/about/about";
+@import "../modules/_SECTIONS/reasons/reasons";
+@import "../modules/_SECTIONS/survey/survey";
+
+@import "../modules/_SECTIONS/purpose/purpose";
+@import "../modules/_SECTIONS/facilities/facilities";
+@import "../modules/_SECTIONS/geography/geography";
+@import "../modules/_SECTIONS/answers/answers";
+@import "../modules/_SECTIONS/add-question/add-question";
+@import "../modules/_SECTIONS/materials/materials";
+@import "../modules/_SECTIONS/contacts/contacts";
+
+@import "../modules/_SECTIONS/about-angar/about-angar";
+@import "../modules/_SECTIONS/type-metal/type-metal";
+@import "../modules/_SECTIONS/object-info/object-info";
+@import "../modules/_SECTIONS/object-place/object-place";
+@import "../modules/_SECTIONS/gallery/gallery";
+
+
+
+
+
+@import "_GLOBAL/main-content";

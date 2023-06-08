@@ -1,0 +1,104 @@
+.about-angar {
+  position: relative;
+
+  &__triangle {
+    top: 832px;
+  }
+
+  &__inner {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 60px;
+
+    @include max-w($desktops-lg) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__item {
+    width: calc(50% - 20px);
+    &:nth-child(2) {
+      display: flex;
+      flex-direction: column;
+      background-color: #393737;
+    }
+
+    @include max-w($desktops-lg) {
+      width: 100%;
+      max-width: 750px;
+    }
+  }
+
+  &__slider {
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 80px 50px 85px 85px;
+    gap: 45px;
+
+    @include max-w($tablets) {
+      padding: 40px 15px;
+    }
+  }
+
+  &__list-item {
+    position: relative;
+    padding-left: 92px;
+    min-height: 65px;
+    padding-top: 4px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 65px;
+      height: 65px;
+      z-index: 1;
+      background-color: #f29d39;
+    }
+
+    &:last-child {
+      margin-top: 90px;
+      @include max-w($desktops-md) {
+        margin-top: unset;
+      }
+    }
+  }
+
+  &__text-wrap {
+    font-size: 24px;
+    line-height: 29px;
+
+    @include max-w($tablets) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  &__title {
+    display: block;
+    font-weight: 700;
+  }
+
+  &__text {
+    display: block;
+    font-weight: 300;
+  }
+
+  &__icon {
+    position: absolute;
+    z-index: 2;
+    top: 11px;
+    left: 10px;
+    width: 45px;
+    height: 45px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+}

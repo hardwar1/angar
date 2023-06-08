@@ -1,0 +1,43 @@
+.gallery {
+  position: relative;
+
+  &__triangle {
+    top: -300px;
+  }
+
+  &__h2 {
+  }
+
+  &__list {
+    display: flex;
+    gap: 40px 30px;
+    flex-wrap: wrap;
+    @include max-w($desktops-sm) {
+      gap: 10px;
+    }
+  }
+
+  &__item {
+    width: calc(25% - 23px);
+
+    &:nth-child(n + 9) {
+      display: none;
+    }
+    
+    @include max-w($desktops-sm) {
+      width: calc(25% - 8px);
+    }
+  }
+
+  &__link {
+    display: block;
+    position: relative;
+    height: 100%;
+  }
+
+  &__img {
+    object-fit: cover;
+    height: 100%;
+    max-height: 354px;
+  }
+}

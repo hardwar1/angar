@@ -1,0 +1,105 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-family: $ff-mon;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #fff;
+  background-color: #424242;
+  min-width: 320px;
+  overflow-x: hidden;
+
+  @include max-w($desktops-xl) {
+    font-size: 13px;
+    line-height: 16px;
+  }
+}
+
+main {
+  position: relative;
+  overflow: hidden;
+}
+
+blockquote {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  transition-property: color;
+  transition-duration: 0.3s;
+  color: inherit;
+}
+
+b {
+  font-weight: 600;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+dl {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  letter-spacing: inherit;
+  appearance: none;
+  cursor: pointer;
+}
+
+address {
+  font-style: normal;
+}
+
+figure,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+cite {
+  font-style: normal;
+}

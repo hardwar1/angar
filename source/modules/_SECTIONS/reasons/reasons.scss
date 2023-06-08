@@ -1,0 +1,134 @@
+.reasons {
+  position: relative;
+  &__triangle {
+    top: -640px;
+  }
+
+  &__h2 {
+  }
+
+  &__inner {
+    @include max-w($tablets) {
+      padding-left: 25px;
+      padding-right: 25px;
+      &::after,
+      &::before {
+        display: block;
+      }
+    }
+  }
+
+  &__list-wrap {
+    overflow: auto;
+  }
+
+  &__list {
+    display: flex;
+    gap: 60px 30px;
+    flex-wrap: wrap;
+    padding-top: 27px;
+
+    @include max-w($desktops-xl) {
+      gap: 40px 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @include max-w($tablets) {
+      width: fit-content;
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__item {
+    min-height: 315px;
+    width: calc(100% / 4 - 23px);
+    background-color: #272727;
+    padding: 106px 30px 30px;
+    text-align: center;
+    position: relative;
+    transition: background-color 0.3s;
+
+    @include max-w($desktops-xl) {
+      width: calc(33% - 20px);
+    }
+
+    @include max-w($desktops-md) {
+      width: calc(50% - 15px);
+      min-height: unset;
+      padding-bottom: 50px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    @include max-w($tablets) {
+      width: 240px;
+      padding-bottom: 20px;
+      padding-top: 70px;
+    }
+
+    &:hover {
+      background-color: #474747;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -27px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 92px;
+      height: 92px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      background-image: url(../img/reasons/1.jpg);
+
+      @include max-w($tablets) {
+        width: 65px;
+        height: 65px;
+      }
+    }
+
+    &--icon-2::after {
+      background-image: url(../img/reasons/2.jpg);
+    }
+    &--icon-3::after {
+      background-image: url(../img/reasons/3.jpg);
+    }
+    &--icon-4::after {
+      background-image: url(../img/reasons/4.jpg);
+    }
+    &--icon-5::after {
+      background-image: url(../img/reasons/5.jpg);
+    }
+    &--icon-6::after {
+      background-image: url(../img/reasons/6.jpg);
+    }
+    &--icon-7::after {
+      background-image: url(../img/reasons/7.jpg);
+    }
+    &--icon-8::after {
+      background-image: url(../img/reasons/8.jpg);
+    }
+  }
+
+  &__h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 46px;
+    margin-bottom: 10px;
+
+    * {
+    }
+  }
+
+  &__text {
+    font-size: 19px;
+    line-height: 23px;
+    @include max-w($tablets) {
+      font-size: 14px;
+    }
+  }
+}

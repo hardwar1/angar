@@ -1,0 +1,56 @@
+.materials {
+  &__h2 {
+  }
+
+  &__slider {
+    position: relative;
+
+    @include max-w($tablets) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__swiper {
+  }
+
+  &__list {
+  }
+
+  &__item {
+    width: unset;
+    @include max-w($tablets) {
+      width: 100%;
+    }
+  }
+
+  &__card {
+    @include max-w($tablets) {
+      margin: 0 auto;
+    }
+  }
+
+  &__btn {
+    display: block;
+    margin-left: auto;
+    width: fit-content;
+    padding: 30px 86px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    position: relative;
+    z-index: 15;
+    @include max-w($tablets) {
+      margin-right: auto;
+    }
+  }
+
+  &__pagination {
+    bottom: -40px;
+    @include max-w($tablets) {
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: fit-content;
+    }
+  }
+}

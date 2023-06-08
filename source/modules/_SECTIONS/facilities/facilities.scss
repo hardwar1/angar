@@ -1,0 +1,55 @@
+.facilities {
+  &__h2 {
+  }
+
+  &__slider {
+    padding-bottom: 65px;
+    position: relative;
+  }
+
+  &__swiper {
+  }
+
+  &__list {
+    align-items: stretch;
+  }
+
+  &__item {
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    @include max-w($tablets) {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  &__card {
+  }
+
+  &__pagination {
+    bottom: -20px;
+    right: 0;
+    left: unset;
+    width: fit-content;
+    @include max-w($tablets) {
+      right: 50%;
+      transform: translateX(50%);
+      bottom: 25px;
+    }
+  }
+
+  &__btn {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    width: fit-content;
+    padding: 30px 40px;
+
+    @include max-w($tablets) {
+      display: block;
+      margin: 0 auto;
+      padding: 15px 30px;
+    }
+  }
+}

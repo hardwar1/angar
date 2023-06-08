@@ -1,0 +1,32 @@
+<div class="reasons {{reasons-parent-mod}} {{reasons-mod}}">
+
+  {{> triangle triangle-parent-mod="reasons__triangle" color="#797548" triangle-mod="triangle--right" }}
+
+  <div class="container">
+    <div class="reasons__h2 line">
+      <h2>
+        8 пРИЧИН ВЫБРАТЬ НАШИ АНГАРЫ
+      </h2>
+    </div>
+
+    <div class="reasons__inner arrows">
+      <div class="reasons__list-wrap">
+        <ul class="reasons__list">
+          {{#each reasons}}
+          <li class="reasons__item reasons__item--icon-{{icon}}">
+            <div class="reasons__h3">
+              <h3>
+                {{title}}
+              </h3>
+            </div>
+
+            <p class="reasons__text">
+              {{text}}
+            </p>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,68 @@
+.add-question {
+  &__inner {
+    padding: 63px 134px 83px;
+    background-color: #2c2c2b;
+    border: 1px solid #747474;
+
+    @include max-w($desktops-sm) {
+      padding: 50px 30px;
+    }
+    @include max-w($tablets) {
+      padding: 35px 15px;
+    }
+  }
+
+  &__h2 {
+    margin-bottom: 50px;
+
+    * {
+      text-align: left;
+      margin-bottom: 0;
+    }
+  }
+
+  &__row {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+    
+    @include max-w($desktops-lg) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    @include max-w($tablets) {
+      gap: 20px;
+    }
+  }
+
+  &__input {
+    width: calc(100% / 3 - 27px);
+    @include max-w($desktops-lg) {
+      width: 100%;
+    }
+  }
+
+  &__btn {
+    width: calc(100% / 3 - 27px);
+    height: 93px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include max-w($desktops-lg) {
+      width: unset;
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+
+    @include max-w($tablets) {
+      height: 65px;
+      width: 100%;
+    }
+  }
+}

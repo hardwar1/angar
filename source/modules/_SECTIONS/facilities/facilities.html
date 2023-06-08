@@ -1,0 +1,103 @@
+<div class="facilities">
+  <div class="container">
+    <div class="facilities__h2 line">
+      <h2>
+        Наши объекты
+      </h2>
+    </div>
+
+    <div class="facilities__slider">
+      <div class="facilities__swiper swiper">
+        <ul class="facilities__list swiper-wrapper">
+          {{#each card}}
+          <li class="facilities__item swiper-slide">
+            <article class="facilities__card card">
+              <a class="card__link" href="">
+                <span class="card__hover">
+                  ПРОМЫШЛЕНЫЙ
+                </span>
+                <span class="card__hover card__hover--orange">
+                  Подробнее
+                </span>
+
+                <div class="card__img-wrap">
+                  <img class="card__img" src="img/card/{{img}}.jpg" height="" width="" alt="КАРКАСНО-ТЕНТОВЫЙ СКЛАД">
+                </div>
+
+                <div class="card__info">
+                  <div class="card__title ">
+                    <h3>
+                      КАРКАСНО-ТЕНТОВЫЙ СКЛАД
+                    </h3>
+                  </div>
+
+                    <span class="card__place">
+                      Республика Башкортостан
+                    </span>
+
+                    <div class="card__row">
+                      <div class="card__property card__property--snow">
+                        <span class="card__text">
+                          Снеговой район
+                          <span class="card__num">
+                            5
+                          </span>
+                        </span>
+                      </div>
+
+                      <div class="card__property card__property--wind">
+                        <span class="card__text">
+                          Ветровой район
+                          <span class="card__num">
+                             3
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+
+                    <div class="card__row">
+                      <div class="card__property card__property--date">
+                        <span class="card__text">
+                          Дата постройки
+                          <span class="card__num">
+                            29.03.2023
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+
+                    <div class="card__row">
+                      <div class="card__property card__property--width">
+                        <span class="card__text">
+                          Ширина
+                          <span class="card__num">
+                            12 м
+                          </span>
+                        </span>
+                      </div>
+
+                      <div class="card__property card__property--height">
+                        <span class="card__text">
+                          Длина
+                          <span class="card__num">
+                            30 м
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+
+                </div>
+              </a>
+            </article>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+      {{> pagination pagination-parent-mod="facilities__pagination" pagination-mod=""}}
+    </div>
+
+    <a class="facilities__btn btn btn--yellow" href="">
+      Смотреть все объекты
+    </a>
+  </div>
+</div>

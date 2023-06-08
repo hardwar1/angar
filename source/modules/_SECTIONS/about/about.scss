@@ -1,0 +1,119 @@
+.about {
+  position: relative;
+
+  &__triangle {
+    top: -857px;
+  }
+
+  &__h2 {
+  }
+
+  &__slider {
+    position: relative;
+  }
+
+  &__slider-inner {
+  }
+
+  &__list {
+  }
+
+  &__slide {
+    height: unset;
+  }
+
+  &__slide-inner {
+    position: relative;
+    height: 100%;
+    display: flex;
+    gap: 30px;
+
+    @include max-w($desktops-xl) {
+      gap: 20px;
+    }
+
+    @include max-w($desktops-md) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 15px);
+    background-color: #454545;
+    padding: 55px 55px 55px 65px;
+
+    @include max-w($desktops-xl) {
+      padding: 25px 25px 38px;
+      width: calc(100% - 10px);
+    }
+
+    @include max-w($tablets) {
+      padding: 30px 15px;
+    }
+  }
+
+  &__text {
+    font-family: $ff-lato;
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 43px;
+  }
+
+  &__btns {
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    @include max-w($tablets) {
+      gap: 20px;
+    }
+  }
+
+  &__btn {
+    padding: 25px 10px;
+    width: 100%;
+    max-width: 255px;
+    @include max-w($tablets) {
+      width: 100%;
+      max-width: unset;
+    }
+  }
+
+  &__img-wrap {
+    width: calc(100% - 15px);
+    display: flex;
+
+    @include max-w($desktops-xl) {
+      width: calc(100% - 10px);
+    }
+
+    @include max-w($desktops-md) {
+      order: -1;
+      height: 250px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__pagination {
+    left: calc(100% - 19px);
+    bottom: -20px;
+    transform: rotate(90deg) translateX(-50%);
+    width: fit-content;
+
+    @include max-w($desktops-md) {
+      bottom: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

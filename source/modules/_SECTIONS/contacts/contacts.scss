@@ -1,0 +1,88 @@
+.contacts {
+  padding-top: 71px;
+
+  &__triangle {
+    top: -800px;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &__inner {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    @include max-w($desktops-sm) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__info {
+    max-width: 494px;
+    padding-top: 70px;
+    padding-bottom: 80px;
+
+    @include max-w($desktops-sm) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  &__h2 {
+    margin-bottom: 45px;
+    * {
+      text-align: left;
+      margin-bottom: 0;
+    }
+  }
+
+  &__list {
+    padding-left: 5px;
+    margin-bottom: 43px;
+  }
+
+  &__item {
+    margin-bottom: 43px;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 30px;
+
+    @include max-w($tablets) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__name {
+    margin-bottom: 11px;
+    display: block;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 21px;
+  }
+
+  &__social {
+  }
+
+  &__img-wrpap {
+    width: calc(100% - 533px);
+
+    @include max-w($desktops-sm) {
+      width: 600px;
+      max-width: 100%;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}

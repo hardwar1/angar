@@ -1,0 +1,340 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  z-index: 20;
+
+  &__container {
+    padding-left: 0;
+    @include max-w($desktops-sm) {
+      padding-left: 15px;
+    }
+  }
+
+  &__top {
+    padding: 13px 0;
+    display: flex;
+    align-items: center;
+
+    @include max-w($desktops-sm) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__logo {
+    margin-right: 4px;
+    position: relative;
+    z-index: 35;
+  }
+
+  &__logo-text {
+    width: 107px;
+    margin-right: 54px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+
+    @include max-w($desktops-xl) {
+      margin-right: auto;
+    }
+  }
+
+  &__address {
+    margin-right: auto;
+
+    @include max-w($desktops-sm) {
+      display: none;
+    }
+  }
+
+  &__address-list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__address-item {
+    margin-right: 12px;
+
+    &:first-child {
+      margin-right: 55px;
+      @include max-w($desktops-xl) {
+        margin-right: 12px;
+        .header__text {
+          display: none;
+        }
+      }
+    }
+
+    &:nth-last-child(2) {
+      margin-right: 25px;
+
+      @include max-w($desktops-xl) {
+        margin-right: 12px;
+      }
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__address-link {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &__icon {
+  }
+
+  &__text {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+
+    @include max-w($desktops-xl) {
+      font-size: 13px;
+      line-height: 15px;
+      display: none;
+    }
+  }
+
+  &__btns {
+    @include max-w($desktops-sm) {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    @include max-w($tablets) {
+      flex-direction: column;
+      gap: 15px
+    }
+  }
+
+  &__btn {
+    &:not(:last-child) {
+      margin-right: 40px;
+
+      @include max-w($desktops-xl) {
+        margin-right: 30px;
+      }
+      @include max-w($tablets) {
+        margin-right: 0;
+      }
+    }
+
+    @include max-w($desktops-xl) {
+      font-size: 12px;
+      width: 210px;
+    }
+
+    @include max-w($desktops-xl) {
+      font-size: 12px;
+      width: unset;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    @include max-w($tablets) {
+    padding: 14px 10px;
+    }
+  }
+
+  &__bottom {
+    background-color: #303030;
+  }
+
+  &__bottom-address {
+    display: none;
+    @include max-w($desktops-sm) {
+      display: block;
+      width: fit-content;
+      margin: 0 auto;
+    }
+  }
+
+  &__mobile-wrap {
+    @include max-w($desktops-sm) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #393939;
+      height: 100vh;
+      padding-top: 120px;
+      padding-bottom: 40px;
+      overflow: auto;
+      z-index: 30;
+      transform: translateX(150%);
+      transition: transform 0.6s;
+
+      &.active {
+        transform: translateX(0);
+      }
+    }
+  }
+
+  &__menu {
+    display: flex;
+    @include max-w($desktops-sm) {
+      display: block;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__menu-item {
+    width: calc(100% / 6);
+    border: 1px solid #424141;
+    position: relative;
+
+    @include max-w($desktops-sm) {
+      width: unset;
+    }
+  }
+
+  &__menu-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    min-height: 87px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #1f1f1f;
+    }
+  }
+
+  &__menu-btn {
+    display: none;
+    @include max-w($desktops-sm) {
+      display: block;
+      position: absolute;
+      top: 50px;
+      right: 20px;
+      z-index: 35;
+    }
+  }
+
+  &__drop-menu {
+    width: 500px;
+    position: absolute;
+    top: calc(100% + 1px);
+    left: 0;
+    background-color: #303030;
+    z-index: 10;
+
+    &--row {
+      width: calc(100% * 4 + 8px);
+
+      @include max-w($desktops-lg) {
+        width: unset;
+      }
+    }
+
+    @include max-w($desktops-sm) {
+      position: static;
+      width: unset;
+    }
+  }
+
+  &__drop-menu--row &__drop-list {
+    display: flex;
+    @include max-w($desktops-lg) {
+      display: block;
+    }
+  }
+
+  &__drop-menu--row &__item {
+    width: 25%;
+    @include max-w($desktops-lg) {
+      width: unset;
+    }
+  }
+
+  &__drop-menu--row &__drop-link {
+    justify-content: center;
+    gap: 8px;
+    border: 1px solid #424141;
+    min-height: 87px;
+    padding: 10px;
+
+    @include max-w($desktops-sm) {
+      min-height: unset;
+      padding: 10px 30px;
+      gap: 30px;
+    }
+
+    &::after {
+      content: unset;
+    }
+  }
+
+  &__drop-menu--row &__drop-icon {
+    width: 54px;
+    height: 24px;
+  }
+
+  &__item:last-child &__drop-link::after {
+    content: unset;
+  }
+
+  &__drop-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    padding: 19px 50px 20px;
+    position: relative;
+    transition: background-color 0.3s;
+
+    @include max-w($desktops-sm) {
+      padding: 10px 30px;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: calc(100% - 100px);
+      height: 1px;
+      background-color: #404040;
+      transition: width 0.3s;
+      z-index: 1;
+    }
+
+    &:hover {
+      background-color: #1f1f1f;
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+
+  &__drop-icon {
+    width: 29px;
+    height: 29px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+}
