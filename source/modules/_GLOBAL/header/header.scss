@@ -105,11 +105,19 @@
   }
 
   &__btns {
+    display: flex;
+    gap: 40px;
+
+    @include max-w($desktops-xl) {
+      gap: 30px;
+    }
+
     @include max-w($desktops-sm) {
       width: 100%;
-      display: flex;
+
       justify-content: center;
     }
+
 
     @include max-w($tablets) {
       flex-direction: column;
@@ -118,17 +126,6 @@
   }
 
   &__btn {
-    &:not(:last-child) {
-      margin-right: 40px;
-
-      @include max-w($desktops-xl) {
-        margin-right: 30px;
-      }
-      @include max-w($tablets) {
-        margin-right: 0;
-      }
-    }
-
     @include max-w($desktops-xl) {
       font-size: 12px;
       width: 210px;

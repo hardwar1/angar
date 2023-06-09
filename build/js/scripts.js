@@ -100,6 +100,11 @@ window.addEventListener("DOMContentLoaded", () => {
     $(`.overlay`).addClass('active');
   }
 
+  $('.open-application-js').click((e)=>{
+    e.preventDefault();
+    openPopaps('.application');
+  });
+
   $('.overlay').click(closePopaps);
 
   $(document).keyup(function (e) {
