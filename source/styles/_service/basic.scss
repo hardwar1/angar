@@ -469,6 +469,10 @@ h3,
     padding: 25px 35px 62px;
     background-color: #fff;
     color: #000;
+    @include max-w($tablets) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
   }
 
   &__title {
@@ -489,6 +493,11 @@ h3,
     gap: 30px;
     padding: 13px 0;
     border-bottom: 1px solid #d9d9d9;
+
+    @include max-w($tablets) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &__property {

@@ -15,6 +15,9 @@
       padding-right: 0;
       max-width: calc(50% - 10px + 762px + 75px);
     }
+    @include max-w($tablets) {
+      padding: 0;
+    }
   }
 
   &__inner {

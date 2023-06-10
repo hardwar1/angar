@@ -219,6 +219,9 @@
       min-height: 70px;
       font-size: 14px;
       line-height: 17px;
+      padding-left: 85px;
+      text-align: left;
+      justify-content: flex-start;
     }
 
     &:hover {
@@ -400,20 +403,26 @@
     text-transform: uppercase;
     margin: 0 auto;
     display: block;
+    @include max-w($tablets) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
   }
 
   &__input-text {
     font-weight: 400;
     font-size: 18px;
     line-height: 22px;
-
     color: #000;
     border: 1px solid #ddd;
     width: 390px;
-    max-width: 100%;
     display: block;
     height: 93px;
     padding: 10px 40px;
+
+    @include max-w($tablets) {
+      width: calc(100vw - 30px);
+    }
 
     &::placeholder {
       text-transform: uppercase;
@@ -425,6 +434,10 @@
     min-height: 93px;
     width: 390px;
     max-width: 100%;
+    @include max-w($tablets) {
+      min-height: 60px;
+      width: calc(100vw - 30px);
+    }
   }
 
   &__file-label {
