@@ -113,6 +113,8 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  $('.popap__close').click(closePopaps);
+
 
   $('.padding-top').css('padding-top', $('.header').height() + 'px');
 
