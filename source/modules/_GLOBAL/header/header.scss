@@ -90,6 +90,13 @@
   }
 
   &__icon {
+    svg {
+      transition: transform 0.3s;
+    }
+
+    &:hover svg{
+      transform: scale(1.15);
+    }
   }
 
   &__text {
@@ -118,10 +125,9 @@
       justify-content: center;
     }
 
-
     @include max-w($tablets) {
       flex-direction: column;
-      gap: 15px
+      gap: 15px;
     }
   }
 
@@ -139,7 +145,7 @@
     }
 
     @include max-w($tablets) {
-    padding: 14px 10px;
+      padding: 14px 10px;
     }
   }
 

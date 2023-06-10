@@ -21,6 +21,23 @@
 
   &__img-wrap {
     width: 100%;
+    cursor: pointer;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 2;
+      transition: background-color 0.3s;
+    }
+
+    &:hover::after {
+      background-color: rgba(121, 117, 72, 0.2);
+    }
   }
 
   &__img {
@@ -49,10 +66,26 @@
   }
 
   &__thumb-wrap {
+    cursor: pointer;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 2;
+      transition: background-color 0.3s;
+    }
+
+    &:hover::after {
+      background-color: rgba(121, 117, 72, 0.2);
+    }
   }
 
   &__thumb-img {
-    // height: 239px;
     height: 150px;
     width: 100%;
     object-fit: cover;

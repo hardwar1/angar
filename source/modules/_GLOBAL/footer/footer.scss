@@ -60,6 +60,11 @@
     line-height: 20px;
     text-transform: uppercase;
     padding-bottom: 10px;
+    transition:  color 0.3s;
+
+    &:hover {
+      color: #fac59a;
+    }
   }
 
   &__links {

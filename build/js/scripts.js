@@ -100,7 +100,7 @@ window.addEventListener("DOMContentLoaded", () => {
     $(`.overlay`).addClass('active');
   }
 
-  $('.open-application-js').click((e)=>{
+  $('.open-application-js').click((e) => {
     e.preventDefault();
     openPopaps('.application');
   });
@@ -125,6 +125,49 @@ window.addEventListener("DOMContentLoaded", () => {
     e.preventDefault();
     const menu = $(this).parent('*').find('.drop-menu-body').slideToggle();
   });
+
+  const quizNext = document.querySelectorAll('.quiz-next');
+  if (quizNext.length > 0) {
+    const quizPrevs = document.querySelectorAll('.quiz-prev');
+    const tabsBody = document.querySelectorAll('.tabs-body');
+    for (let i = 0; i < quizPrevs.length; i++) {
+      quizPrevs[i].addEventListener('click', () => {
+        console.log('prev');
+        tabsBody[i + 1].classList.remove('active');
+        tabsBody[i + 1].classList.remove('done');
+        tabsBody[i].classList.remove('done');
+        tabsBody[i].classList.add('active');
+      });
+    }
+
+    for (let i = 0; i < quizNext.length; i++) {
+      quizNext[i].addEventListener('click', () => {
+        console.log('next');
+        tabsBody[i].classList.add('done');
+        tabsBody[i].classList.remove('active');
+        tabsBody[i + 1].classList.add('active');
+      });
+    }
+  }
+
+  const quizNumberBoxs = document.querySelectorAll('.quiz__number-box');
+  if (quizNumberBoxs.length > 0) {
+    for (const box of quizNumberBoxs) {
+      const input = box.querySelector('input');
+      const plusBtn = box.querySelector('.quiz__number-btn--plus');
+      const minusBtn = box.querySelector('.quiz__number-btn--minus');
+
+      plusBtn.addEventListener('click', () => {
+        input.value = Number(input.value) + 1;
+      })
+
+      minusBtn.addEventListener('click', () => {
+        if ( Number(input.value) > 0) {
+          input.value = Number(input.value) - 1;
+        }
+      });
+    }
+  }
 
 
 });
@@ -253,3 +296,4 @@ window.addEventListener('load', () => {
     }
   }
 });
+

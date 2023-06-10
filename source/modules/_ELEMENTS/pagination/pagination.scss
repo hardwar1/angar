@@ -23,8 +23,6 @@
     margin: 0 !important;
   }
 
-
-
   &__inner {
     display: flex;
     align-items: center;
@@ -39,10 +37,18 @@
     width: 25px;
     height: 25px;
     background-color: #797548;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #6a6422;
+    }
   }
 
   &--green &__btn {
     background-color: #1f674d;
+    &:hover {
+      background-color: #1f6729;
+    }
   }
 
   &--green .swiper-pagination-bullet {

@@ -4,14 +4,14 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  padding: 140px 0 130px;
+  padding-top: 140px;
 
   @include max-w($desktops-sm) {
-    padding: 100px 0 80px;
+    padding-top: 100px;
   }
 
   @include max-w($tablets) {
-    padding: 60px 0 40px;
+    padding-top: 60px;
   }
 
   &__container {
@@ -24,8 +24,7 @@
     line-height: 46px;
     text-align: center;
     text-transform: uppercase;
-    color: #000000;
-    margin-bottom: 30px;
+    color: #000;
 
     @include max-w($desktops-sm) {
       font-size: 32px;
@@ -44,18 +43,32 @@
   &__list {
   }
 
-  &__item {
+  &__item-inner {
     position: relative;
+    padding-top: 35px;
+    padding-bottom: 130px;
+
+    @include max-w($desktops-sm) {
+      padding-bottom: 100px 0 80px;
+    }
+
+    @include max-w($tablets) {
+      padding-bottom: 60px 0 40px;
+    }
   }
 
   &__item:first-child .quiz__answer-list {
     max-width: 1380px;
   }
+  &__item:nth-last-child(2) .quiz__answer-list {
+    justify-content: flex-start;
+  }
 
   &__item:last-child .quiz__answer-list {
+    padding-top: 30px;
     justify-content: flex-end;
     margin-left: 0;
-    max-width: 1125px;
+    max-width: 1253px;
     padding-left: 306px;
     position: relative;
     z-index: 2;
@@ -73,7 +86,7 @@
     line-height: 39px;
     text-align: center;
     text-transform: uppercase;
-    color: #000000;
+    color: #000;
     max-width: 930px;
     margin: 0 auto 40px;
 
@@ -91,6 +104,7 @@
   &__answer-list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     gap: 50px 30px;
     min-height: 300px;
@@ -273,6 +287,7 @@
     background-size: contain;
     background-position: center;
     z-index: 2;
+
     @include max-w($tablets) {
       left: 34px;
       top: 50%;
@@ -423,7 +438,7 @@
 
   &__img {
     position: absolute;
-    bottom: -170px;
+    bottom: -85px;
     left: -205px;
     width: 1106px;
     height: 737px;

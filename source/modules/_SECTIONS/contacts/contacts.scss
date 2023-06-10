@@ -59,6 +59,13 @@
     }
   }
 
+  &__link {
+    transition: color 0.3s;
+    &:hover {
+      color: #fac59a;
+    }
+  }
+
   &__name {
     margin-bottom: 11px;
     display: block;

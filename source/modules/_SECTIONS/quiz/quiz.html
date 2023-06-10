@@ -7,348 +7,366 @@
     </div>
 
     <div class="quiz__inner">
-      <ul class="quiz__list">
+      <ul class="quiz__list tabs-list">
 
-        <li class="quiz__item">
-          <div class="quiz__h2">
-            <h2>
-              Шаг 1. Выберите вариант исполнения
-            </h2>
-          </div>
+        <li class="quiz__item tabs-body active">
+          <div class="quiz__item-inner">
+            <div class="quiz__h2">
+              <h2>
+                Шаг 1. Выберите вариант исполнения
+              </h2>
+            </div>
 
-          <ul class="quiz__answer-list">
-            {{#each quiz-answer-list.type-angar}}
-            <li class="quiz__answer-item">
-              <label class="quiz__answer-label">
-                <input class="quiz__answer-radio visually-hidden" type="radio" name="type-angar" value="{{text}}">
+            <ul class="quiz__answer-list">
+              {{#each quiz-answer-list.type-angar}}
+              <li class="quiz__answer-item">
+                <label class="quiz__answer-label">
+                  <input class="quiz__answer-radio visually-hidden" type="radio" name="type-angar" value="{{text}}">
 
-                <div class="quiz__answer-type type-angar">
-                  <img class="type-angar__img" src="img/type/{{img}}.png" height="" width="" alt="тип ангара">
-                  <img class="type-angar__img--hover" src="img/type/{{img}}0.png" height="" width="" alt="тип ангара">
-                  <span class="type-angar__text">
-                    {{text}}
-                  </span>
-                </div>
-              </label>
-            </li>
-            {{/each}}
-
-          </ul>
-
-          <div class="quiz__btns">
-            <button class="btn btn--orange quiz-next" type="button">
-              следующий шаг
-            </button>
-          </div>
-        </li>
-
-        <li class="quiz__item">
-          <div class="quiz__h2">
-            <h2>
-              Шаг 2. Назначение объекта
-            </h2>
-          </div>
-
-          <ul class="quiz__answer-list">
-            {{#each quiz-answer-list.purpose-object}}
-            <li class="quiz__answer-item">
-              <label class="quiz__answer-label">
-                <input class="quiz__checkbox visually-hidden" type="checkbox" name="purpose-object">
-
-                <div class="quiz__checkbox-body">
-                  <span class="quiz__checkbox-fake">
-                    <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M5.5951 11.6076C5.39409 11.6076 5.19308 11.5306 5.03995 11.3775L0.230343 6.56777C-0.0767811 6.26079 -0.0767811 5.76444 0.230343 5.45746C0.537324 5.15048 1.03353 5.15048 1.34065 5.45746L5.5951 9.71191L14.6594 0.647716C14.9664 0.340735 15.4626 0.340735 15.7697 0.647716C16.0767 0.95484 16.0767 1.45104 15.7697 1.75817L6.1504 11.3775C5.99727 11.5306 5.79611 11.6076 5.5951 11.6076Z"
-                        fill="white" />
-                    </svg>
-                  </span>
-
-                  <span class="quiz__checkbox-text">
-                    {{text}}
-                  </span>
-                </div>
-              </label>
-            </li>
-
-            {{/each}}
-          </ul>
-
-          <div class="quiz__btns">
-            <button class="btn btn--yellow quiz-prev" type="button">
-              предыдущий шаг
-            </button>
-            <button class="btn btn--orange quiz-next" type="button">
-              следующий шаг
-            </button>
-          </div>
-        </li>
-
-        <li class="quiz__item">
-          <div class="quiz__h2">
-            <h2>
-              Шаг 3. Выберите вариант покрытия
-            </h2>
-          </div>
-
-          <ul class="quiz__answer-list">
-            {{#each quiz-answer-list.coverage}}
-            <li class="quiz__answer-item">
-              <label class="quiz__answer-label">
-                <input class="quiz__checkbox visually-hidden" type="radio" name="coverage">
-
-                <div class="quiz__checkbox-body quiz__checkbox-body--box-icon">
-                  <span class="quiz__box-icon" style="background-image: url(img/quiz/{{icon}}.png)"></span>
-                  <span class="quiz__box-text">
-                    {{text}}
-                  </span>
-                </div>
-              </label>
-            </li>
-
-            {{/each}}
-          </ul>
-
-          <div class="quiz__btns">
-            <button class="btn btn--yellow quiz-prev" type="button">
-              предыдущий шаг
-            </button>
-            <button class="btn btn--orange quiz-next" type="button">
-              следующий шаг
-            </button>
-          </div>
-        </li>
-
-
-        <li class="quiz__item">
-          <div class="quiz__h2">
-            <h2>
-              Шаг 4. Укажите размер сооружния
-            </h2>
-          </div>
-
-          <div class="quiz__text">
-            <p>
-              Высота сооружения в коньке рассчитывается в нашеми конструкторском бюро (на основании СНИП, ГОСТ и СП)
-            </p>
-          </div>
-
-          <ul class="quiz__answer-list">
-            {{#each quiz-answer-list.size}}
-            <li class="quiz__answer-item">
-              <div class="quiz__number-box">
-                <label class="quiz__number-label">
-                  <span class="quiz__input-name">
-                    {{text}}
-                  </span>
-                  <input class="quiz__input-number" type="number" name="{{name}}" value="0" min="0">
-                  м
+                  <div class="quiz__answer-type type-angar">
+                    <img class="type-angar__img" src="img/type/{{img}}.png" height="" width="" alt="тип ангара">
+                    <img class="type-angar__img--hover" src="img/type/{{img}}0.png" height="" width="" alt="тип ангара">
+                    <span class="type-angar__text">
+                      {{text}}
+                    </span>
+                  </div>
                 </label>
+              </li>
+              {{/each}}
 
-                <div class="quiz__number-btns">
-                  <button class="quiz__number-btn quiz__number-btn--plus" type="button">+</button>
-                  <button class="quiz__number-btn quiz__number-btn--minus" type="button">-</button>
+            </ul>
+
+            <div class="quiz__btns">
+              <button class="btn btn--orange quiz-next" type="button">
+                следующий шаг
+              </button>
+            </div>
+          </div>
+        </li>
+
+        <li class="quiz__item tabs-body">
+          <div class="quiz__item-inner">
+            <div class="quiz__h2">
+              <h2>
+                Шаг 2. Назначение объекта
+              </h2>
+            </div>
+
+            <ul class="quiz__answer-list">
+              {{#each quiz-answer-list.purpose-object}}
+              <li class="quiz__answer-item">
+                <label class="quiz__answer-label">
+                  <input class="quiz__checkbox visually-hidden" type="checkbox" name="purpose-object">
+
+                  <div class="quiz__checkbox-body">
+                    <span class="quiz__checkbox-fake">
+                      <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M5.5951 11.6076C5.39409 11.6076 5.19308 11.5306 5.03995 11.3775L0.230343 6.56777C-0.0767811 6.26079 -0.0767811 5.76444 0.230343 5.45746C0.537324 5.15048 1.03353 5.15048 1.34065 5.45746L5.5951 9.71191L14.6594 0.647716C14.9664 0.340735 15.4626 0.340735 15.7697 0.647716C16.0767 0.95484 16.0767 1.45104 15.7697 1.75817L6.1504 11.3775C5.99727 11.5306 5.79611 11.6076 5.5951 11.6076Z"
+                          fill="white" />
+                      </svg>
+                    </span>
+
+                    <span class="quiz__checkbox-text">
+                      {{text}}
+                    </span>
+                  </div>
+                </label>
+              </li>
+
+              {{/each}}
+            </ul>
+
+            <div class="quiz__btns">
+              <button class="btn btn--yellow quiz-prev" type="button">
+                предыдущий шаг
+              </button>
+              <button class="btn btn--orange quiz-next" type="button">
+                следующий шаг
+              </button>
+            </div>
+          </div>
+        </li>
+
+        <li class="quiz__item tabs-body">
+          <div class="quiz__item-inner">
+            <div class="quiz__h2">
+              <h2>
+                Шаг 3. Выберите вариант покрытия
+              </h2>
+            </div>
+
+            <ul class="quiz__answer-list">
+              {{#each quiz-answer-list.coverage}}
+              <li class="quiz__answer-item">
+                <label class="quiz__answer-label">
+                  <input class="quiz__checkbox visually-hidden" type="radio" name="coverage">
+
+                  <div class="quiz__checkbox-body quiz__checkbox-body--box-icon">
+                    <span class="quiz__box-icon" style="background-image: url(img/quiz/{{icon}}.png)"></span>
+                    <span class="quiz__box-text">
+                      {{text}}
+                    </span>
+                  </div>
+                </label>
+              </li>
+
+              {{/each}}
+            </ul>
+
+            <div class="quiz__btns">
+              <button class="btn btn--yellow quiz-prev" type="button">
+                предыдущий шаг
+              </button>
+              <button class="btn btn--orange quiz-next" type="button">
+                следующий шаг
+              </button>
+            </div>
+          </div>
+        </li>
+
+        <li class="quiz__item tabs-body">
+          <div class="quiz__item-inner">
+            <div class="quiz__h2">
+              <h2>
+                Шаг 4. Укажите размер сооружния
+              </h2>
+            </div>
+
+            <div class="quiz__text">
+              <p>
+                Высота сооружения в коньке рассчитывается в нашеми конструкторском бюро (на основании СНИП, ГОСТ и СП)
+              </p>
+            </div>
+
+            <ul class="quiz__answer-list">
+              {{#each quiz-answer-list.size}}
+              <li class="quiz__answer-item">
+                <div class="quiz__number-box">
+                  <label class="quiz__number-label">
+                    <span class="quiz__input-name">
+                      {{text}}
+                    </span>
+                    <input class="quiz__input-number" type="number" name="{{name}}" value="0" min="0">
+                    м
+                  </label>
+
+                  <div class="quiz__number-btns">
+                    <button class="quiz__number-btn quiz__number-btn--plus" type="button">+</button>
+                    <button class="quiz__number-btn quiz__number-btn--minus" type="button">-</button>
+                  </div>
                 </div>
-              </div>
-            </li>
+              </li>
 
-            {{/each}}
-          </ul>
+              {{/each}}
+            </ul>
 
-          <div class="quiz__btns">
-            <button class="btn btn--yellow quiz-prev" type="button">
-              предыдущий шаг
-            </button>
-            <button class="btn btn--orange quiz-next" type="button">
-              следующий шаг
-            </button>
+            <div class="quiz__btns">
+              <button class="btn btn--yellow quiz-prev" type="button">
+                предыдущий шаг
+              </button>
+              <button class="btn btn--orange quiz-next" type="button">
+                следующий шаг
+              </button>
+            </div>
           </div>
         </li>
 
 
-        <li class="quiz__item">
-          <div class="quiz__h2">
-            <h2>
-              Шаг 5. Покрытие металлокаркаса
-            </h2>
-          </div>
+        <li class="quiz__item tabs-body">
+          <div class="quiz__item-inner">
+            <div class="quiz__h2">
+              <h2>
+                Шаг 5. Покрытие металлокаркаса
+              </h2>
+            </div>
 
-          <ul class="quiz__answer-list">
-            {{#each quiz-answer-list.metal}}
-            <li class="quiz__answer-item">
-              <label class="quiz__answer-label">
-                <input class="quiz__checkbox visually-hidden" type="radio" name="metal">
+            <ul class="quiz__answer-list">
+              {{#each quiz-answer-list.metal}}
+              <li class="quiz__answer-item">
+                <label class="quiz__answer-label">
+                  <input class="quiz__checkbox visually-hidden" type="radio" name="metal">
 
-                <div class="quiz__checkbox-body quiz__checkbox-body--box-icon">
-                  <span class="quiz__box-icon" style="background-image: url(img/quiz/{{icon}}.png)"></span>
-                  <span class="quiz__box-text">
-                    {{text}}
-                  </span>
-                </div>
-              </label>
-            </li>
+                  <div class="quiz__checkbox-body quiz__checkbox-body--box-icon">
+                    <span class="quiz__box-icon" style="background-image: url(img/quiz/{{icon}}.png)"></span>
+                    <span class="quiz__box-text">
+                      {{text}}
+                    </span>
+                  </div>
+                </label>
+              </li>
 
-            {{/each}}
-          </ul>
+              {{/each}}
+            </ul>
 
-          <div class="quiz__btns">
-            <button class="btn btn--yellow quiz-prev" type="button">
-              предыдущий шаг
-            </button>
-            <button class="btn btn--orange quiz-next" type="button">
-              следующий шаг
-            </button>
-          </div>
-        </li>
-
-
-        <li class="quiz__item">
-          <div class="quiz__h2">
-            <h2>
-              Шаг 6. Кто будет осуществлять монтаж
-            </h2>
-          </div>
-
-          <ul class="quiz__answer-list">
-            {{#each quiz-answer-list.who-installation}}
-            <li class="quiz__answer-item">
-              <label class="quiz__answer-label">
-                <input class="quiz__checkbox visually-hidden" type="radio" name="who-installation">
-
-                <div class="quiz__checkbox-body quiz__checkbox-body--box-icon">
-                  <span class="quiz__box-icon" style="background-image: url(img/quiz/{{icon}}.png)"></span>
-                  <span class="quiz__box-text">
-                    {{text}}
-                  </span>
-                </div>
-              </label>
-            </li>
-
-            {{/each}}
-          </ul>
-
-          <div class="quiz__btns">
-            <button class="btn btn--yellow quiz-prev" type="button">
-              предыдущий шаг
-            </button>
-            <button class="btn btn--orange quiz-next" type="button">
-              следующий шаг
-            </button>
+            <div class="quiz__btns">
+              <button class="btn btn--yellow quiz-prev" type="button">
+                предыдущий шаг
+              </button>
+              <button class="btn btn--orange quiz-next" type="button">
+                следующий шаг
+              </button>
+            </div>
           </div>
         </li>
 
 
-        <li class="quiz__item">
-          <div class="quiz__h2">
-            <h2>
-              Шаг 7. Регион установки ангара
-            </h2>
-          </div>
+        <li class="quiz__item tabs-body">
+          <div class="quiz__item-inner">
+            <div class="quiz__h2">
+              <h2>
+                Шаг 6. Кто будет осуществлять монтаж
+              </h2>
+            </div>
 
-          <div class="quiz__answer-list">
+            <ul class="quiz__answer-list">
+              {{#each quiz-answer-list.who-installation}}
+              <li class="quiz__answer-item">
+                <label class="quiz__answer-label">
+                  <input class="quiz__checkbox visually-hidden" type="radio" name="who-installation">
 
-            <input class="quiz__input-place" type="text" name="place" placeholder="Укажите регион"
-              aria-label="Укажите регион">
+                  <div class="quiz__checkbox-body quiz__checkbox-body--box-icon">
+                    <span class="quiz__box-icon" style="background-image: url(img/quiz/{{icon}}.png)"></span>
+                    <span class="quiz__box-text">
+                      {{text}}
+                    </span>
+                  </div>
+                </label>
+              </li>
 
-          </div>
+              {{/each}}
+            </ul>
 
-          <div class="quiz__btns">
-            <button class="btn btn--yellow quiz-prev" type="button">
-              предыдущий шаг
-            </button>
-            <button class="btn btn--orange quiz-next" type="button">
-              следующий шаг
-            </button>
-          </div>
-        </li>
-
-
-        <li class="quiz__item">
-          <div class="quiz__h2">
-            <h2>
-              Шаг 8. Укажите примерные сроки начала строительства
-            </h2>
-          </div>
-
-          <ul class="quiz__answer-list">
-            {{#each quiz-answer-list.date-start}}
-            <li class="quiz__answer-item">
-              <label class="quiz__answer-label">
-                <input class="quiz__checkbox visually-hidden" type="checkbox" name="date-start">
-
-                <div class="quiz__checkbox-body">
-                  <span class="quiz__checkbox-fake">
-                    <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M5.5951 11.6076C5.39409 11.6076 5.19308 11.5306 5.03995 11.3775L0.230343 6.56777C-0.0767811 6.26079 -0.0767811 5.76444 0.230343 5.45746C0.537324 5.15048 1.03353 5.15048 1.34065 5.45746L5.5951 9.71191L14.6594 0.647716C14.9664 0.340735 15.4626 0.340735 15.7697 0.647716C16.0767 0.95484 16.0767 1.45104 15.7697 1.75817L6.1504 11.3775C5.99727 11.5306 5.79611 11.6076 5.5951 11.6076Z"
-                        fill="white" />
-                    </svg>
-                  </span>
-
-                  <span class="quiz__checkbox-text">
-                    {{text}}
-                  </span>
-                </div>
-              </label>
-            </li>
-
-            {{/each}}
-          </ul>
-
-          <div class="quiz__btns">
-            <button class="btn btn--yellow quiz-prev" type="button">
-              предыдущий шаг
-            </button>
-            <button class="btn btn--orange quiz-next" type="button">
-              следующий шаг
-            </button>
+            <div class="quiz__btns">
+              <button class="btn btn--yellow quiz-prev" type="button">
+                предыдущий шаг
+              </button>
+              <button class="btn btn--orange quiz-next" type="button">
+                следующий шаг
+              </button>
+            </div>
           </div>
         </li>
 
 
-        <li class="quiz__item">
-          <div class="quiz__h2">
-            <h2>
-              Шаг 9. Дополнительные услуги для вашего ангара (звонок менеджера с уточнением)
-            </h2>
-          </div>
+        <li class="quiz__item tabs-body">
+          <div class="quiz__item-inner">
+            <div class="quiz__h2">
+              <h2>
+                Шаг 7. Регион установки ангара
+              </h2>
+            </div>
 
-          <ul class="quiz__answer-list">
-            {{#each quiz-answer-list.services}}
-            <li class="quiz__answer-item">
-              <label class="quiz__answer-label">
-                <input class="quiz__checkbox visually-hidden" type="checkbox" name="services">
+            <div class="quiz__answer-list">
 
-                <div class="quiz__checkbox-body">
-                  <span class="quiz__checkbox-fake">
-                    <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M5.5951 11.6076C5.39409 11.6076 5.19308 11.5306 5.03995 11.3775L0.230343 6.56777C-0.0767811 6.26079 -0.0767811 5.76444 0.230343 5.45746C0.537324 5.15048 1.03353 5.15048 1.34065 5.45746L5.5951 9.71191L14.6594 0.647716C14.9664 0.340735 15.4626 0.340735 15.7697 0.647716C16.0767 0.95484 16.0767 1.45104 15.7697 1.75817L6.1504 11.3775C5.99727 11.5306 5.79611 11.6076 5.5951 11.6076Z"
-                        fill="white" />
-                    </svg>
-                  </span>
+              <input class="quiz__input-place" type="text" name="place" placeholder="Укажите регион"
+                aria-label="Укажите регион">
 
-                  <span class="quiz__checkbox-text">
-                    {{text}}
-                  </span>
-                </div>
-              </label>
-            </li>
+            </div>
 
-            {{/each}}
-          </ul>
-
-          <div class="quiz__btns">
-            <button class="btn btn--yellow quiz-prev" type="button">
-              предыдущий шаг
-            </button>
-            <button class="btn btn--orange quiz-next" type="button">
-              следующий шаг
-            </button>
+            <div class="quiz__btns">
+              <button class="btn btn--yellow quiz-prev" type="button">
+                предыдущий шаг
+              </button>
+              <button class="btn btn--orange quiz-next" type="button">
+                следующий шаг
+              </button>
+            </div>
           </div>
         </li>
 
-        <li class="quiz__item">
+
+        <li class="quiz__item tabs-body">
+          <div class="quiz__item-inner">
+            <div class="quiz__h2">
+              <h2>
+                Шаг 8. Укажите примерные сроки начала строительства
+              </h2>
+            </div>
+
+            <ul class="quiz__answer-list">
+              {{#each quiz-answer-list.date-start}}
+              <li class="quiz__answer-item">
+                <label class="quiz__answer-label">
+                  <input class="quiz__checkbox visually-hidden" type="checkbox" name="date-start">
+
+                  <div class="quiz__checkbox-body">
+                    <span class="quiz__checkbox-fake">
+                      <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M5.5951 11.6076C5.39409 11.6076 5.19308 11.5306 5.03995 11.3775L0.230343 6.56777C-0.0767811 6.26079 -0.0767811 5.76444 0.230343 5.45746C0.537324 5.15048 1.03353 5.15048 1.34065 5.45746L5.5951 9.71191L14.6594 0.647716C14.9664 0.340735 15.4626 0.340735 15.7697 0.647716C16.0767 0.95484 16.0767 1.45104 15.7697 1.75817L6.1504 11.3775C5.99727 11.5306 5.79611 11.6076 5.5951 11.6076Z"
+                          fill="white" />
+                      </svg>
+                    </span>
+
+                    <span class="quiz__checkbox-text">
+                      {{text}}
+                    </span>
+                  </div>
+                </label>
+              </li>
+
+              {{/each}}
+            </ul>
+
+            <div class="quiz__btns">
+              <button class="btn btn--yellow quiz-prev" type="button">
+                предыдущий шаг
+              </button>
+              <button class="btn btn--orange quiz-next" type="button">
+                следующий шаг
+              </button>
+            </div>
+          </div>
+        </li>
+
+
+        <li class="quiz__item tabs-body">
+          <div class="quiz__item-inner">
+            <div class="quiz__h2">
+              <h2>
+                Шаг 9. Дополнительные услуги для вашего ангара (звонок менеджера с уточнением)
+              </h2>
+            </div>
+
+            <ul class="quiz__answer-list">
+              {{#each quiz-answer-list.services}}
+              <li class="quiz__answer-item">
+                <label class="quiz__answer-label">
+                  <input class="quiz__checkbox visually-hidden" type="checkbox" name="services">
+
+                  <div class="quiz__checkbox-body">
+                    <span class="quiz__checkbox-fake">
+                      <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M5.5951 11.6076C5.39409 11.6076 5.19308 11.5306 5.03995 11.3775L0.230343 6.56777C-0.0767811 6.26079 -0.0767811 5.76444 0.230343 5.45746C0.537324 5.15048 1.03353 5.15048 1.34065 5.45746L5.5951 9.71191L14.6594 0.647716C14.9664 0.340735 15.4626 0.340735 15.7697 0.647716C16.0767 0.95484 16.0767 1.45104 15.7697 1.75817L6.1504 11.3775C5.99727 11.5306 5.79611 11.6076 5.5951 11.6076Z"
+                          fill="white" />
+                      </svg>
+                    </span>
+
+                    <span class="quiz__checkbox-text">
+                      {{text}}
+                    </span>
+                  </div>
+                </label>
+              </li>
+
+              {{/each}}
+            </ul>
+
+            <div class="quiz__btns">
+              <button class="btn btn--yellow quiz-prev" type="button">
+                предыдущий шаг
+              </button>
+              <button class="btn btn--orange quiz-next" type="button">
+                следующий шаг
+              </button>
+            </div>
+          </div>
+        </li>
+
+        <li class="quiz__item tabs-body">
+          <div class="quiz__item-inner">
           <div class="quiz__h2">
             <h2>
               Мы скоро рассчитаем ваш проект. Заполните поля и ожидайте нашего предложения
@@ -357,15 +375,18 @@
 
           <ul class="quiz__answer-list">
             <li class="quiz__answer-item">
-              <input class="quiz__input-text" type="text" name="name" placeholder="Ваше имя" aria-label="Ваше имя" required>
+              <input class="quiz__input-text" type="text" name="name" placeholder="Ваше имя" aria-label="Ваше имя"
+                required>
             </li>
 
             <li class="quiz__answer-item">
-              <input class="quiz__input-text" type="tel" name="tel" placeholder="Ваш телефон" aria-label="Ваш телефон" required>
+              <input class="quiz__input-text" type="tel" name="tel" placeholder="Ваш телефон" aria-label="Ваш телефон"
+                required>
             </li>
 
             <li class="quiz__answer-item">
-              <input class="quiz__input-text" type="email" name="email" placeholder="Ваша почта" aria-label="Ваша почта" required>
+              <input class="quiz__input-text" type="email" name="email" placeholder="Ваша почта" aria-label="Ваша почта"
+                required>
             </li>
 
             <li class="quiz__answer-item">
@@ -386,6 +407,7 @@
           </ul>
 
           <span class="quiz__img" style="background-image: url(img/quiz/bg.png);"></span>
+        </div>
         </li>
       </ul>
     </div>
