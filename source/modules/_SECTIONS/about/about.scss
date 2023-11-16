@@ -32,7 +32,7 @@
       gap: 20px;
     }
 
-    @include max-w($desktops-md) {
+    @include max-w($tablets) {
       flex-direction: column;
       align-items: center;
     }
@@ -44,6 +44,9 @@
     width: calc(100% - 15px);
     background-color: #454545;
     padding: 55px 55px 55px 65px;
+    background-image: url(../img/about-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 
     @include max-w($desktops-xl) {
       padding: 25px 25px 38px;
@@ -60,15 +63,23 @@
     font-size: 18px;
     line-height: 22px;
     margin-bottom: 43px;
+    height: 300px;
+    overflow: auto;
   }
 
   &__btns {
     margin-top: auto;
     display: flex;
-    flex-wrap: wrap;
     gap: 40px;
+
+    @include max-w($desktops-md) {
+      gap: 26px;
+    }
+
     @include max-w($tablets) {
       gap: 20px;
+      flex-direction: column;
+      align-items: center;
     }
   }
 
@@ -76,9 +87,22 @@
     padding: 25px 10px;
     width: 100%;
     max-width: 255px;
-    @include max-w($tablets) {
+
+    @include max-w($desktops-md) {
+      padding: 17px 10px;
+      width: 100%;
+      font-size: 13px;
+      line-height: 16px;
+    }
+
+    @include max-w($desktops-sm) {
+      font-size: 12px;
       width: 100%;
       max-width: unset;
+    }
+
+    @include max-w($tablets) {
+      width: 160px;
     }
   }
 
@@ -91,8 +115,6 @@
     }
 
     @include max-w($desktops-md) {
-      order: -1;
-      height: 250px;
       max-width: 600px;
       margin: 0 auto;
     }
@@ -111,7 +133,7 @@
     width: fit-content;
 
     @include max-w($desktops-md) {
-      bottom: -30px;
+      bottom: -42px;
       left: 50%;
       transform: translateX(-50%);
     }

@@ -54,8 +54,6 @@
 
   &__table-arrows {
     @include max-w($desktops-md) {
-      padding-left: 25px;
-      padding-right: 25px;
       &::after,
       &::before {
         display: block;

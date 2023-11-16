@@ -10,23 +10,28 @@
     </div>
 
     <div class="reasons__inner arrows">
-      <div class="reasons__list-wrap">
+      <div class="reasons__list-wrap swiper-768-gap">
         <ul class="reasons__list">
           {{#each reasons}}
           <li class="reasons__item reasons__item--icon-{{icon}}">
-            <div class="reasons__h3">
-              <h3>
-                {{title}}
-              </h3>
-            </div>
+            <a class="reasons__item-link" href="">
+              <div class="reasons__h3">
+                <h3>
+                  {{title}}
+                </h3>
+              </div>
 
-            <p class="reasons__text">
-              {{text}}
-            </p>
+              <p class="reasons__text">
+                {{text}}
+              </p>
+            </a>
           </li>
           {{/each}}
         </ul>
       </div>
+
+      <button class="mobile-slider-btn mobile-slider-btn--prev" type="button"></button>
+      <button class="mobile-slider-btn mobile-slider-btn--next" type="button"></button>
     </div>
   </div>
 </div>

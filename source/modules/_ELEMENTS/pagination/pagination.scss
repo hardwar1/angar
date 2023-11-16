@@ -55,6 +55,18 @@
     background-color: #9f9e9e;
   }
 
+  &--orange .swiper-pagination-bullet {
+    background-color: #9F9E9E;
+  }
+
+  &--orange &__btn {
+    background-color: #f29d39;
+
+    &:hover {
+      background-color: #d98c34;
+    }
+  }
+
   .swiper-pagination-bullet:focus,
   .swiper-pagination-bullet:hover,
   .swiper-pagination-bullet-active {

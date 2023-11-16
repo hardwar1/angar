@@ -34,6 +34,7 @@
     max-width: 740px;
     width: 100%;
     height: fit-content;
+
     @include max-w($desktops-xl) {
       flex-shrink: 0;
     }
@@ -57,6 +58,7 @@
 
   &__info {
     padding: 100px 75px;
+
     @include max-w($desktops-xl) {
       padding: 80px 35px;
     }
@@ -131,6 +133,7 @@
   &__text-wrap {
     font-size: 24px;
     line-height: 29px;
+
     @include max-w($tablets) {
       font-size: 18px;
       line-height: 22px;
@@ -154,11 +157,31 @@
   }
 
   &__btn {
+    padding: 26px 20px;
   }
 
   .slider__thumb-img {
     @media (min-width: $desktops-md) {
       height: 165px;
+    }
+  }
+
+  .pagination {
+    display: block;
+    top: calc(100% + 27px);
+
+    .swiper-pagination-bullet {
+      background-color: #c3c3c3;
+    }
+
+    .swiper-pagination-bullet:focus,
+    .swiper-pagination-bullet:hover,
+    .swiper-pagination-bullet-active {
+      background-color: #f29d39;
+    }
+
+    @include max-w($desktops-md) {
+      display: none;
     }
   }
 }

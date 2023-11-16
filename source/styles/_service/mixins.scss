@@ -33,7 +33,7 @@
   }
 }
 
-@mixin text-overflow($lines) {
+@mixin line-clamp($lines) {
   -webkit-line-clamp: $lines;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -50,12 +50,7 @@
   padding: 0 75px;
 
   @include max-w($desktops-sm) {
-    padding: 0 20px;
-  }
-
-  @include max-w($tablets) {
-    padding-right: 15px;
-    padding-left: 15px;
+    padding: 0 24px;
   }
 }
 

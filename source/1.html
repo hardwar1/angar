@@ -2,19 +2,22 @@
 layout: 1
 title: Список страниц
 list-1:
-    -   href: index
-        text: Главная
-    -   href: type-angar-page
-        text: Тип ангара
-    -   href: object-page
-        text: КАРКАСНО-ТЕНТОВЫЙ СКЛАД
-    -   href: quiz-page
-        text: Узнай стоимость строительства ангара
+- href: index
+  text: Главная
+- href: type-angar-page
+  text: Тип ангара
+- href: object-page
+  text: КАРКАСНО-ТЕНТОВЫЙ СКЛАД
+- href: quiz-page
+  text: Узнай стоимость строительства ангара
 ---
-<ol>
+
+<nav>
+  <ol>
     {{#each list-1}}
     <li>
-        <a href="{{href}}.html">{{text}}</a>
+      <a href="{{href}}.html">{{text}}</a>
     </li>
     {{/each}}
-</ol>
+  </ol>
+</nav>

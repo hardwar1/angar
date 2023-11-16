@@ -71,7 +71,12 @@
   }
 
   &__btn {
-    margin-bottom: 55px;
+    margin-bottom: 50px;
+    margin-top: 14px;
+    @include max-w($desktops-lg) {
+      margin-top: 0;
+      margin-bottom: 16px;
+    }
   }
 
   &__by {

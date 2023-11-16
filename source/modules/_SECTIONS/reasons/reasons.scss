@@ -9,8 +9,6 @@
 
   &__inner {
     @include max-w($tablets) {
-      padding-left: 25px;
-      padding-right: 25px;
       &::after,
       &::before {
         display: block;
@@ -19,7 +17,6 @@
   }
 
   &__list-wrap {
-    overflow: auto;
   }
 
   &__list {
@@ -28,14 +25,13 @@
     flex-wrap: wrap;
     padding-top: 27px;
 
-    @include max-w($desktops-xl) {
-      gap: 40px 30px;
-      flex-wrap: wrap;
+    @include max-w($desktops-lg) {
+      gap: 40px 20px;
       justify-content: center;
     }
 
     @include max-w($tablets) {
-      width: fit-content;
+      gap: 0;
       flex-wrap: nowrap;
     }
   }
@@ -43,32 +39,15 @@
   &__item {
     min-height: 315px;
     width: calc(100% / 4 - 23px);
-    background-color: #272727;
-    padding: 106px 30px 30px;
-    text-align: center;
     position: relative;
-    transition: background-color 0.3s;
 
-    @include max-w($desktops-xl) {
-      width: calc(33% - 20px);
-    }
-
-    @include max-w($desktops-md) {
-      width: calc(50% - 15px);
-      min-height: unset;
-      padding-bottom: 50px;
-      padding-left: 10px;
-      padding-right: 10px;
+    @include max-w($desktops-lg) {
+      min-height: 224px;
+      width: calc(100% / 4 - 15px);
     }
 
     @include max-w($tablets) {
-      width: 240px;
-      padding-bottom: 20px;
-      padding-top: 70px;
-    }
-
-    &:hover {
-      background-color: #474747;
+      width: 200px;
     }
 
     &::after {
@@ -84,9 +63,10 @@
       background-position: center;
       background-image: url(../img/reasons/1.jpg);
 
-      @include max-w($tablets) {
-        width: 65px;
-        height: 65px;
+      @include max-w($desktops-lg) {
+        top: -12px;
+        width: 52px;
+        height: 48px;
       }
     }
 
@@ -113,6 +93,24 @@
     }
   }
 
+  &__item-link {
+    display: block;
+    background-color: #272727;
+    padding: 106px 30px 30px;
+    text-align: center;
+    transition: background-color 0.3s;
+    position: relative;
+    height: 100%;
+
+    @include max-w($desktops-lg) {
+      padding: 71px 19px 25px;
+    }
+
+    &:hover {
+      background-color: #474747;
+    }
+  }
+
   &__h3 {
     display: flex;
     justify-content: center;
@@ -120,15 +118,28 @@
     min-height: 46px;
     margin-bottom: 10px;
 
-    * {
+    & > * {
+      @include max-w($desktops-lg) {
+        font-size: 15px;
+        line-height: 18px;
+      }
+
+      @include max-w($desktops-sm) {
+        font-size: 13px;
+      }
     }
   }
 
   &__text {
     font-size: 19px;
     line-height: 23px;
-    @include max-w($tablets) {
-      font-size: 14px;
+
+    @include max-w($desktops-lg) {
+      font-size: 13px;
+      line-height: 16px;
+    }
+    @include max-w($desktops-sm) {
+      font-size: 12px;
     }
   }
 }

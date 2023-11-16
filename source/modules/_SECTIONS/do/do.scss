@@ -4,8 +4,6 @@
 
   &__inner {
     @include max-w($desktops-md) {
-      padding-left: 25px;
-      padding-right: 25px;
       &::after,
       &::before {
         display: block;
@@ -14,25 +12,24 @@
   }
 
   &__list-wrap {
-    overflow: auto;
-    // overflow: -moz-scrollbars-vertical;
   }
 
   &__list {
     display: flex;
-    min-width: 1020px;
   }
 
   &__item {
-    border-left: 1px solid #7d7d7d;
-    border-right: 1px solid #7d7d7d;
-    padding: 135px 26px 44px;
     max-width: calc(100% / 5);
-    transition: background-color 0.3s;
     position: relative;
 
-    @include max-w($desktops-xl) {
-      padding-top: 85px;
+    @include max-w($desktops-md) {
+      height: auto;
+      max-width: 302px;
+    }
+
+    @include max-w($phones-md) {
+      width: 100%;
+      max-width: unset;
     }
 
     &::after {
@@ -52,10 +49,6 @@
       }
     }
 
-    &:hover {
-      background-color: #333333;
-    }
-
     &--icon1::after {
       background-image: url(../img/do/1.png);
     }
@@ -70,6 +63,24 @@
     }
     &--icon5::after {
       background-image: url(../img/do/5.png);
+    }
+  }
+
+  &__item-link {
+    display: block;
+    border-left: 1px solid #7d7d7d;
+    border-right: 1px solid #7d7d7d;
+    transition: background-color 0.3s;
+    position: relative;
+    height: 100%;
+    padding: 135px 26px 44px;
+
+    @include max-w($desktops-xl) {
+      padding-top: 85px;
+    }
+
+    &:hover {
+      background-color: #333333;
     }
   }
 

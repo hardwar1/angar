@@ -5,12 +5,11 @@
   width: 100%;
   color: #fff;
   z-index: 20;
+  @include max-w($tablets) {
+    position: static;
+  }
 
   &__container {
-    padding-left: 0;
-    @include max-w($desktops-sm) {
-      padding-left: 15px;
-    }
   }
 
   &__top {
@@ -24,9 +23,17 @@
   }
 
   &__logo {
-    margin-right: 4px;
     position: relative;
     z-index: 35;
+    transform: translateX(-15px);
+    margin-right: -11px;
+
+    img {
+      @include max-w($desktops-sm) {
+        height: 64px;
+        width: 60px;
+      }
+    }
   }
 
   &__logo-text {
@@ -43,8 +50,17 @@
 
   &__address {
     margin-right: auto;
+    margin-left: 10px;
+
+    @include max-w($desktops-md) {
+      margin-right: 0;
+    }
 
     @include max-w($desktops-sm) {
+      margin-right: 6px;
+    }
+
+    @include max-w($phones-md) {
       display: none;
     }
   }
@@ -56,23 +72,29 @@
 
   &__address-item {
     margin-right: 12px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+
+    @include max-w($desktops-xl) {
+      font-size: 13px;
+      line-height: 15px;
+    }
 
     &:first-child {
       margin-right: 55px;
+      font-weight: 300;
       @include max-w($desktops-xl) {
-        margin-right: 12px;
-        .header__text {
-          display: none;
-        }
+        margin-right: 25px;
+      }
+
+      @include max-w($desktops-sm) {
+        display: none;
       }
     }
 
     &:nth-last-child(2) {
       margin-right: 25px;
-
-      @include max-w($desktops-xl) {
-        margin-right: 12px;
-      }
     }
 
     &:last-child {
@@ -84,9 +106,7 @@
     display: flex;
     align-items: center;
     gap: 13px;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 20px;
+    
   }
 
   &__icon {
@@ -94,19 +114,13 @@
       transition: transform 0.3s;
     }
 
-    &:hover svg{
+    &:hover svg {
       transform: scale(1.15);
     }
   }
 
   &__text {
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 20px;
-
     @include max-w($desktops-xl) {
-      font-size: 13px;
-      line-height: 15px;
       display: none;
     }
   }
@@ -115,19 +129,8 @@
     display: flex;
     gap: 40px;
 
-    @include max-w($desktops-xl) {
-      gap: 30px;
-    }
-
-    @include max-w($desktops-sm) {
-      width: 100%;
-
-      justify-content: center;
-    }
-
-    @include max-w($tablets) {
-      flex-direction: column;
-      gap: 15px;
+    @include max-w($desktops-md) {
+      display: none;
     }
   }
 
@@ -158,7 +161,18 @@
     @include max-w($desktops-sm) {
       display: block;
       width: fit-content;
-      margin: 0 auto;
+      margin: 0 auto 30px;
+
+      li:first-child {
+        display: block;
+      }
+    }
+
+    @include max-w($tablets) {
+      flex-wrap: wrap;
+      li:not(:last-child) {
+        margin-right: 12px;
+      }
     }
   }
 
@@ -199,6 +213,11 @@
     @include max-w($desktops-sm) {
       width: unset;
     }
+
+    &:hover .drop-menu-body {
+      height: auto;
+      transform: scale(1);
+    }
   }
 
   &__menu-link {
@@ -217,16 +236,17 @@
     &:hover {
       background-color: #1f1f1f;
     }
+
+    &.drop-menu-btn:focus + .drop-menu-body {
+      height: auto;
+      transform: scale(1);
+    }
   }
 
   &__menu-btn {
     display: none;
     @include max-w($desktops-sm) {
       display: block;
-      position: absolute;
-      top: 50px;
-      right: 20px;
-      z-index: 35;
     }
   }
 
@@ -237,9 +257,12 @@
     left: 0;
     background-color: #303030;
     z-index: 10;
+    transition: transform 0.2s;
+    height: 0;
+    transform: scale(0);
 
     &--row {
-      width: calc(100% * 4 + 8px);
+      width: calc(100% * 4 + 6px);
 
       @include max-w($desktops-lg) {
         width: unset;
@@ -339,5 +362,27 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+  }
+
+  &__mobile-btns {
+    display: none;
+    @include max-w($desktops-sm) {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      > * {
+        width: calc(50% - 34px);
+      }
+    }
+
+    @include max-w($tablets) {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+
+      > * {
+        width: calc(100% - 48px);
+      }
+    }
   }
 }

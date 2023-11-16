@@ -1,10 +1,12 @@
 .geography {
   position: relative;
+  z-index: 0;
 
   &__triangle {
     top: unset;
     width: 39%;
     bottom: -1000px;
+    z-index: 2;
   }
 
   &__h2 {
@@ -15,10 +17,16 @@
   }
 
   &__map {
+    position: relative;
     height: 870px;
-    z-index: 0;
+    z-index: 1;
     @include max-w($desktops-sm) {
       height: 414px;
+    }
+
+    & > * {
+      position: relative;
+      height: 100% !important;
     }
   }
 
@@ -36,22 +44,12 @@
     }
   }
 
-  &__img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    opacity: 0.81;
-    z-index: -2;
-  }
-
   &__baloon {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translateY(-50%) translateX(180px);
+    z-index: 2;
 
     @include max-w($desktops-lg) {
       left: unset;

@@ -4,8 +4,6 @@
 
   &__inner {
     @include max-w($tablets) {
-      padding-left: 25px;
-      padding-right: 25px;
       &::after,
       &::before {
         display: block;
@@ -14,13 +12,14 @@
   }
 
   &__list-wrap {
-    overflow: auto;
+
   }
 
   &__list {
     display: flex;
     justify-content: center;
     gap: 30px;
+
     @include max-w($desktops-md) {
       flex-wrap: wrap;
       gap: 20px;
@@ -28,7 +27,8 @@
 
     @include max-w($tablets) {
       flex-wrap: nowrap;
-      width: fit-content;
+      justify-content: flex-start;
+      gap: 0;
     }
   }
 
@@ -41,7 +41,7 @@
 
     @include max-w($tablets) {
       font-size: 16px;
-      width: 250px;
+      width: 272px;
     }
   }
 

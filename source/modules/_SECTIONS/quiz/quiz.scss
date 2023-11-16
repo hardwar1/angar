@@ -49,11 +49,11 @@
     padding-bottom: 130px;
 
     @include max-w($desktops-sm) {
-      padding-bottom: 100px 0 80px;
+      padding: 100px 0 80px;
     }
 
     @include max-w($tablets) {
-      padding-bottom: 60px 0 40px;
+      padding: 60px 0;
     }
   }
 
@@ -145,11 +145,11 @@
   &__answer-type {
     width: 320px;
     @include max-w($desktops-sm) {
-      width: calc(50vw - 20px - 15px);
+      width: calc(50vw - 20px - 20px);
     }
 
     @include max-w($tablets) {
-      width: calc(50vw - 15px - 5px);
+      width: calc(50vw - 15px - 15px);
       font-size: 14px;
       padding-top: 30px;
       padding-bottom: 30px;
@@ -173,6 +173,10 @@
         width: unset;
       }
     }
+  }
+
+  label {
+    cursor: pointer;
   }
 
   &__checkbox:checked + &__checkbox-body,
@@ -316,8 +320,9 @@
     max-width: 100%;
     display: flex;
     gap: 16px;
+
     @include max-w($desktops-sm) {
-      width: calc(100vw - 30px);
+      width: calc(100vw - 48px);
       justify-content: center;
     }
   }
@@ -346,6 +351,7 @@
     width: 60px;
     text-align: right;
     border: 0;
+    outline: 0;
 
     &::-webkit-outer-spin-button,
     &::-webkit-inner-spin-button {
@@ -359,6 +365,7 @@
     flex-direction: column;
     justify-content: space-between;
     gap: 10px;
+    flex-shrink: 0;
   }
 
   &__number-btn {
@@ -467,5 +474,13 @@
 
   .clear {
     padding-bottom: 0;
+  }
+
+  &__btn {
+    @media (min-width: $desktops-sm) {
+      width: 348px;
+      font-size: 16px;
+      line-height: 20px;
+    }
   }
 }
